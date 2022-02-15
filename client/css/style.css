@@ -1,0 +1,137 @@
+
+/* ------------------ Fonts From Google Fonts ----------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Poppins:wght@100;200;300;400&display=swap');
+
+/* 
+
+# Included Fonts Are :
+    -> Open Sans :
+        * Font Weights : 400, 500 ,600
+    
+    -> Oswald :
+        * Font Weights : 400, 500, 600, 700
+    
+    -> Poppins :
+        * Font Weights : 100, 200, 300, 400
+
+*/
+
+
+
+
+
+/* ----------------------
+
+    Global CSS
+
+-----------------------*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/* ---- Variables ---- */
+
+:root{
+
+    /* FONT VARIABLES  */
+    --pri-font: 'Open Sans', sans-serif;
+    --sec-font: 'Oswald', sans-serif;
+    --tri-font: 'Poppins', sans-serif;
+
+    /* FONT COLORS */
+    --pri-color: white;
+    --sec-color: #1ea5fc;
+    --tri-color: #c8c8c8;
+
+    /* DARK COLOR VARIABLES */
+    /* darkness decreases downwards */
+    --dark1: black;
+    --dark2: rgb(26, 26, 26);
+    --dark3: rgb(37, 37, 37);
+    --dark4: rgb(70, 69, 69);
+    --dark5: rgb(117, 116, 116);
+
+}
+
+
+
+/* --------------------- Default Tags ------------------ */
+
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--sec-font);
+    color: var(--dark1);
+    margin: 15px;
+}
+
+h1{
+    font-size: 55px;
+}
+
+h2{
+    font-size: 45px;
+}
+
+h3{
+    font-size: 35px;
+}
+
+h4{
+    font-size: 30px;
+}
+
+h5{
+    font-size: 25px;
+}
+
+h6{
+    font-size: 20px;
+}
+
+p, span{
+    font-family: var(--tri-font);
+    margin: 12px 8px;
+    color: var(--dark3);
+}
+
+p{
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+
+/* ------------------- Default Classes ------------------- */
+
+
+
+
+/* ------------------------ Extras ------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
