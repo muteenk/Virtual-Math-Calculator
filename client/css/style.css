@@ -2,6 +2,7 @@
 /* ------------------ Fonts From Google Fonts ----------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Poppins:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
 
 /* 
 
@@ -113,25 +114,71 @@ a{
 li{
     list-style: none;
 }
+button{
+    color: black;
+    background-color:aliceblue;
+    width: 60px;
+    height:55px;
+    font-size: 25px;
+    border: 0px solid blue;
+    border-radius: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:5px 5px rgb(180, 220, 255);
+}
 
+body{
+    background-color:white;
+}
 
+input{
+    padding: 70px 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    border: 2px rgb(211, 209, 209);
+    border-style:outset;
+    border-radius: 16px;
+}
 /* ------------------- Default Classes ------------------- */
 
+.black{
+    color: white;
+    background-color: var(--sec-color);
+    border-radius: 15px;
+}
 
-
+.input i{
+    position: absolute;
+    margin-top: 130px;
+    margin-left: 200px;
+    cursor: pointer;
+}
+.input i:hover{
+    color: red;
+}
 
 /* ------------------------ Extras ------------------- */
+.container{
+    background-color: aliceblue;
+    margin-left: 35%;
+    display: inline-block;
+    justify-content: center;
+    padding: 10px 10px;
+    border-radius: 12px;
+}
+.input{
+    display: flex;
+    justify-content: center;
+}
 
+.logo img{
+    width:4%;
+    border:3px solid black;
+    border-radius:80px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+.main table{
+    display: grid;
+    justify-content: center;
+}
