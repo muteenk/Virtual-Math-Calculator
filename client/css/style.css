@@ -1,8 +1,7 @@
-
 /* ------------------ Fonts From Google Fonts ----------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Poppins:wght@100;200;300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Oswald:wght@400;500;600;700&family=Poppins:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
 /* 
 
@@ -18,167 +17,163 @@
 
 */
 
-
-
-
-
 /* ----------------------
 
     Global CSS
 
 -----------------------*/
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Open Sans', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
 }
-
-
 
 /* ---- Variables ---- */
 
-:root{
+:root {
+  /* FONT VARIABLES  */
+  --pri-font: "Open Sans", sans-serif;
+  --sec-font: "Oswald", sans-serif;
+  --tri-font: "Poppins", sans-serif;
 
-    /* FONT VARIABLES  */
-    --pri-font: 'Open Sans', sans-serif;
-    --sec-font: 'Oswald', sans-serif;
-    --tri-font: 'Poppins', sans-serif;
+  /* FONT COLORS */
+  --pri-color: white;
+  --sec-color: #1ea5fc;
+  --tri-color: #c8c8c8;
 
-    /* FONT COLORS */
-    --pri-color: white;
-    --sec-color: #1ea5fc;
-    --tri-color: #c8c8c8;
-
-    /* DARK COLOR VARIABLES */
-    /* darkness decreases downwards */
-    --dark1: black;
-    --dark2: rgb(26, 26, 26);
-    --dark3: rgb(37, 37, 37);
-    --dark4: rgb(70, 69, 69);
-    --dark5: rgb(117, 116, 116);
-
+  /* DARK COLOR VARIABLES */
+  /* darkness decreases downwards */
+  --dark1: black;
+  --dark2: rgb(26, 26, 26);
+  --dark3: rgb(37, 37, 37);
+  --dark4: rgb(70, 69, 69);
+  --dark5: rgb(117, 116, 116);
 }
-
-
 
 /* --------------------- Default Tags ------------------ */
 
-
-h1, h2, h3, h4, h5, h6{
-    font-family: var(--sec-font);
-    color: var(--dark1);
-    margin: 15px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--sec-font);
+  color: var(--dark1);
+  margin: 15px;
 }
 
-h1{
-    font-size: 55px;
+h1 {
+  font-size: 55px;
 }
 
-h2{
-    font-size: 45px;
+h2 {
+  font-size: 45px;
 }
 
-h3{
-    font-size: 35px;
+h3 {
+  font-size: 35px;
 }
 
-h4{
-    font-size: 30px;
+h4 {
+  font-size: 30px;
 }
 
-h5{
-    font-size: 25px;
+h5 {
+  font-size: 25px;
 }
 
-h6{
-    font-size: 20px;
+h6 {
+  font-size: 20px;
 }
 
-p, span{
-    font-family: var(--tri-font);
-    margin: 12px 8px;
-    color: var(--dark3);
+p,
+span {
+  font-family: var(--tri-font);
+  margin: 12px 8px;
+  color: var(--dark3);
 }
 
-p{
-    font-size: 20px;
+p {
+  font-size: 20px;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
-button{
-    color: black;
-    background-color:aliceblue;
-    width: 60px;
-    height:55px;
-    font-size: 25px;
-    border: 0px solid blue;
-    border-radius: 15px;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow:5px 5px rgb(180, 220, 255);
-}
-
-body{
-    background-color:white;
+button {
+  width: 60px;
+  height: 55px;
+  color: black;
+  background-color: aliceblue;
+  font-size: 25px;
+  margin: 3px 2px;
+  font-family: "Rajdhani", sans-serif;
+  border: 0px solid blue;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 5px 5px rgb(168, 212, 250);
 }
 
-input{
-    padding: 70px 5px;
-    margin-bottom: 15px;
-    font-size: 20px;
-    border: 2px rgb(211, 209, 209);
-    border-style:outset;
-    border-radius: 16px;
+body {
+  background-color: white;
+}
+
+input {
+  padding: 70px 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  border: 2px rgb(211, 209, 209);
+  border-style: outset;
+  border-radius: 16px;
 }
 /* ------------------- Default Classes ------------------- */
 
-.black{
-    color: white;
-    background-color: var(--sec-color);
-    border-radius: 15px;
+.black {
+  color: white;
+  background-color: var(--sec-color);
+  border-radius: 15px;
 }
 
-.input i{
-    position: absolute;
-    margin-top: 130px;
-    margin-left: 200px;
-    cursor: pointer;
+.input i {
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 200px;
+  cursor: pointer;
 }
-.input i:hover{
-    color: red;
+.input i:hover {
+  color: red;
 }
 
 /* ------------------------ Extras ------------------- */
-.container{
-    background-color: aliceblue;
-    margin-left: 35%;
-    display: inline-block;
-    justify-content: center;
-    padding: 10px 10px;
-    border-radius: 12px;
+.container {
+  background-color: rgb(228, 241, 251);
+  margin-left: 35%;
+  display: inline-block;
+  justify-content: center;
+  padding: 20px 10px;
+  border-radius: 12px;
 }
-.input{
-    display: flex;
-    justify-content: center;
-}
-
-.logo img{
-    width:4%;
-    border:3px solid black;
-    border-radius:80px;
+.input {
+  display: flex;
+  justify-content: center;
 }
 
-.main table{
-    display: grid;
-    justify-content: center;
+.logo img {
+  width: 4%;
+  border: 3px solid black;
+  border-radius: 80px;
+}
+
+.main table {
+  display: grid;
+  justify-content: center;
 }
