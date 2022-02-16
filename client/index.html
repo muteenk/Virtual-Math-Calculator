@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
+  <head>
     <!-- Important Meta Tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Icon Library -->
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- Title -->
     <title>Voice Calc</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="logo">
-        <!-- <img src="" alt="logo_calculator"> -->
-        <h2>Virtual Math Calculator</h2>
+      <!-- <img src="" alt="logo_calculator"> -->
+      <h2>Virtual Math Calculator</h2>
     </div>
     <div class="container">
-        <div class="main">
-            <div class="input">
-                <input type="text" name="screen" id="screen" placeholder="" >
-                <i class="material-icons mic" style="font-size:36px">mic</i>
-            </div>
-            <table>
-                <tr>
-                    <td><button class="black">HCF</button></td>
-                    <td><button class="black">LCM</button></td>
-                    <td><button class="black">C</button></td>
-                    <td><button class="black">%</button></td>
-                </tr>
-                <tr>
-                    <td><button>7</button></td>
-                    <td><button>8</button></td>
-                    <td><button>9</button></td>
-                    <td><button class="black">x</button></td>
-                </tr>
-                <tr>
-                    <td><button>4</button></td>
-                    <td><button>5</button></td>
-                    <td><button>6</button></td>
-                    <td><button class="black">-</button></td>
-                </tr>
-                <tr>
-                    <td><button>1</button></td>
-                    <td><button>2</button></td>
-                    <td><button>3</button></td>
-                    <td><button class="black">+</button></td>
-                </tr>
-                <tr>
-                    <td><button>0</button></td>
-                    <td><button>.</button></td>
-                    <td><button>/</button></td>
-                    <td><button class="black">=</button></td>
-                </tr>
-            </table>
+      <div class="main">
+        <div class="input">
+          <input type="text" name="screen" id="screen" placeholder="" />
         </div>
+        <table>
+          <tr>
+            <td><button class="black">HCF</button></td>
+            <td><button class="black">LCM</button></td>
+            <td><button class="black">C</button></td>
+            <td><button class="black">/</button></td>
+          </tr>
+          <tr>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+            <td><button class="black">x</button></td>
+          </tr>
+          <tr>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+            <td><button class="black">-</button></td>
+          </tr>
+          <tr>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+            <td><button class="black">+</button></td>
+          </tr>
+          <tr>
+            <td><button>0</button></td>
+            <td><button>00</button></td>
+            <td><button id="speechbtn"><i class="material-icons mic" style="font-size: 30px; margin-top:12px">mic</i></button></td>
+            <td><button class="black">=</button></td>
+          </tr>
+        </table>
+      </div>
     </div>
     <!-- Scripting Files -->
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
