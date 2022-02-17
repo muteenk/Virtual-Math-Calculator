@@ -55,6 +55,12 @@
 
 /* --------------------- Default Tags ------------------ */
 
+body{
+  background-color: var(--dark3);
+}
+
+
+/* Headings  */
 h1,
 h2,
 h3,
@@ -62,8 +68,9 @@ h4,
 h5,
 h6 {
   font-family: var(--sec-font);
-  color: var(--dark1);
+  color: var(--tri-color);
   margin: 15px;
+  text-align: center;
 }
 
 h1 {
@@ -90,16 +97,22 @@ h6 {
   font-size: 20px;
 }
 
+
+
+/* Normal Text Tags */
 p,
 span {
   font-family: var(--tri-font);
   margin: 12px 8px;
-  color: var(--dark3);
+  color: var(--tri-color);
+  text-align: center;
 }
 
 p {
   font-size: 20px;
 }
+
+
 
 a {
   text-decoration: none;
@@ -108,8 +121,12 @@ a {
 li {
   list-style: none;
 }
+
+
+
+/* Form Elements */
 button {
-  width: 60px;
+  width: 76px;
   height: 55px;
   color: black;
   background-color: aliceblue;
@@ -123,24 +140,43 @@ button {
   box-shadow: 5px 5px rgb(168, 212, 250);
 }
 
-body {
-  background-color: white;
+textarea {
+	padding: 35px 10px;
+	margin-bottom: 15px;
+	font-size: 20px;
+	border: 2px solid rgb(211, 209, 209);
+	border-style: outset;
+	border-radius: 11px;
+	resize: none;
+	height: 10em;
+	width: 90%;
 }
 
-input {
-  padding: 70px 10px;
-  margin-bottom: 15px;
-  font-size: 20px;
-  border: 2px rgb(211, 209, 209);
-  border-style: outset;
-  border-radius: 16px;
+
+
+footer{
+  padding: 10px;
+  background: linear-gradient(145deg, #212121, #282828);
+  box-shadow:  7px 7px 14px #1f1f1f,
+             -7px -7px 14px #2b2b2b;
 }
+
+
+
+
+
+
 /* ------------------- Default Classes ------------------- */
 
-.black {
+.color-btn {
   color: white;
   background-color: var(--sec-color);
   border-radius: 15px;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
 }
 
 .input i {
@@ -153,18 +189,18 @@ input {
   color: red;
 }
 
+
+
 /* ------------------------ Extras ------------------- */
+
 .container {
   background-color: rgb(228, 241, 251);
-  margin-left: 35%;
-  display: inline-block;
-  justify-content: center;
+  margin: 6em auto;
+  box-shadow:  41px 41px 82px #1e1e1e,
+             -41px -41px 82px #2c2c2c;
   padding: 20px 10px;
   border-radius: 12px;
-}
-.input {
-  display: flex;
-  justify-content: center;
+  width: 20%;
 }
 
 .logo img {
