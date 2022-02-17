@@ -1,12 +1,31 @@
-let screen= document.getElementById('screen');//inputting the value from the id screen(that is the input element)
+
+// --------------- Getting Elements -------------------
+
+// Calculator Screen 
+let screen= document.getElementById('screen');
+
+// Calculator Buttons 
 buttons = document.querySelectorAll('button');
-let screenValue='';
+
+// Speech Button
 let speechbtn = document.getElementById('speechbtn');
 
+
+
+
+
+
+// ----------------- Basic Calculator Code ------------------
+
+// Value to Show on Screen
+let screenValue='';
+
+// Working of UI buttons of Calculator
 for(item of buttons){
+
     item.addEventListener('click',(e)=>{
         buttonText= e.target.innerText;
-        // console.log('Button Text Is', buttonText);
+        
         if(buttonText=='x'){
             buttonText='*';
             screenValue+=buttonText;
@@ -30,18 +49,42 @@ for(item of buttons){
     })
 }
 
-speechbtn.addEventListener('click',function(){
-    var speech = true;
-    window.SpeechRecognition = window.webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
 
-    recognition.addEventListener('result',e=>{
-        const transcript = Array.from(e.results)
-        .map(result => result[0])
-        .map(result => result.transcript)
-        screen.value = transcript;
-    })
-    if(speech == true){
+
+
+// --------------- Speech Recognition ----------------
+
+speechbtn.addEventListener('click', function () {
+    
+    if ("speechSynthesis" in window) {
+
+        // new speech recognition object
+        var SpeechRecognition =  window.speechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition || window.oSpeechRecognition || window.SpeechRecognition || window.webkitSpeechRecognition;
+
+        const recognition = new SpeechRecognition();
+      
+        // This will run when the speech recognition service returns a result
+        recognition.onstart = function() {
+          console.log("Voice recognition started. Try speaking into the microphone.");
+
+        };
+        
+        // Result Event
+        recognition.onresult = function(event) {
+            console.log("result");
+            var transcript = event.results[0][0].transcript;
+            console.log(transcript);
+            screen.value = transcript;
+          };
+        
+        // start recognition
         recognition.start();
+        
+
+    } else {
+        alert("Speech recognition is not supported !");
+        // code to handle error
     }
+
 });
+  
