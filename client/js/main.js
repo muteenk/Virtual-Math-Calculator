@@ -56,10 +56,12 @@ for(item of buttons){
 
 speechbtn.addEventListener('click', function () {
     
-    if ("speechSynthesis" in window) {
+    
 
-        // new speech recognition object
-        var SpeechRecognition =  window.speechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition || window.oSpeechRecognition || window.SpeechRecognition || window.webkitSpeechRecognition;
+    // new speech recognition object
+    var SpeechRecognition =  window.speechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition || window.oSpeechRecognition || window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (SpeechRecognition) {
 
         const recognition = new SpeechRecognition();
       
@@ -71,9 +73,7 @@ speechbtn.addEventListener('click', function () {
         
         // Result Event
         recognition.onresult = function(event) {
-            console.log("result");
             var transcript = event.results[0][0].transcript;
-            console.log(transcript);
             screen.value = transcript;
           };
         
@@ -82,7 +82,7 @@ speechbtn.addEventListener('click', function () {
         
 
     } else {
-        alert("Speech recognition is not supported !");
+        alert("Speech recognition is not supported on your browser, You can type instead !!");
         // code to handle error
     }
 
