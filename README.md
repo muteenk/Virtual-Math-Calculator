@@ -45,6 +45,13 @@ The Code is written in vanilla JS with no libraries involved. We tried to make i
 
 ### Working of Code
 
+- Firstly the main.js file (present in the /js folder) gets the elements - buttons, screen and mic button.
+
+- We add Event Listeners onto each button (onclick event) for button mapping, input screen (onchange event) and another special event listener on mic button to activate Speech Recognition
+
+- Then as you input the data either through keyboard, calculator buttons or voice input, it is sent to getDynamicResult function for the evaluation.
+
+- Then inside the function we split the input string into an array and look for keywords and hence decide the operators and operands and evaluate accordingly.
 
 
 ## Installation 
