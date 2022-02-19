@@ -209,6 +209,10 @@ function getDynamicResult(transcript) {
 
 
 
+
+// ------------------- For calculating LCM and HCF -----------------
+
+
 // Function to find gcd or hcf
 function gcd(x, y) {
     
