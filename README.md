@@ -53,6 +53,8 @@ The Code is written in vanilla JS with no libraries involved. We tried to make i
 
 - Then inside the function we split the input string into an array and look for keywords and hence decide the operators and operands and evaluate accordingly.
 
+![Calculator Working](client/video/ss_vid_calc.mp4)
+
 
 ## Installation 
 
