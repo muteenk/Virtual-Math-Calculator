@@ -92,5 +92,5 @@ Click and type the arithmetic operation or statement on the input screen with th
 
 ## Authors
 
-- (Muteen K)[https://github.com/muteenk/]
-- (Dishu Mavi)[https://github.com/mavidishu/]
+- [Muteen K](https://github.com/muteenk/)
+- [Dishu Mavi](https://github.com/mavidishu/)
