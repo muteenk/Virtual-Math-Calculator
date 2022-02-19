@@ -6,42 +6,6 @@ It can currently only deal with two oprands and one operator in between. It can'
 
 The Code is written in vanilla JS with no libraries involved. We tried to make it efficient with lesser dependencies.
 
-
-## Code File Hierarchy
-
----- client (folder containing all client side source code)
-|    |
-|    --- css (folder containing the stylesheet(s))
-|    |   | 
-|    |    -- style.css (main stylesheet file)
-|    |
-|    |
-|    --- js (folder containing all the javascript file(s))
-|    |   |
-|    |    -- main.js (main scripting file)
-|    |
-|    |
-|    --- img (folder containing images (if any))
-|    |
-|    |
-|    |
-|    |
-|    --- index.html (Main HTML File)
-|
-|
-|
-|
-|
----- README.txt (This file)
-|
-|
-|
----- Requirements.txt (File consisting of all the Requirements)
-
-
-
-
-
 ## 	Features
 
 - [x]   Addition 
