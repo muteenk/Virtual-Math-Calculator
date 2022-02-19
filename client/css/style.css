@@ -140,6 +140,12 @@ button {
   box-shadow: 5px 5px rgb(168, 212, 250);
 }
 
+@media (max-width: 368px) {
+  button {
+    width: 56px;
+  }
+}
+
 textarea {
 	padding: 35px 10px;
 	margin-bottom: 15px;
@@ -201,6 +207,50 @@ footer{
   padding: 20px 10px;
   border-radius: 12px;
   width: 20%;
+}
+
+
+@media (max-width: 1724px) {
+  .container {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1378px) {
+  .container {
+    width: 30%;
+  }
+}
+
+
+@media (max-width: 1154px) {
+  .container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 864px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 690px) {
+  .container {
+    width: 63%;
+  }
+}
+
+@media (max-width: 544px) {
+  .container {
+    width: 76%;
+  }
+}
+
+@media (max-width: 456px) {
+  .container {
+    width: 93%;
+  }
 }
 
 .logo img {
