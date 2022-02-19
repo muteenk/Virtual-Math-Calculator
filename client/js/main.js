@@ -71,7 +71,7 @@ for(item of buttons){
 
 
 
-
+// Whenever Value is changed on the input screen
 screen.addEventListener("change", (e) => {
     screenValue = e.target.value;
 })
@@ -149,7 +149,7 @@ function getDynamicResult(transcript) {
     let hcfOp = ["hcf", "highest", "factor", "greatest", "gcd", "HCF", "GCD"];
     let helpKey = ["from", "and"];
 
-
+    // Iterating and checking for keywords in the transcript or sentence 
     result.forEach(ele => {
         
         if (addOp.includes(ele)){
@@ -180,7 +180,7 @@ function getDynamicResult(transcript) {
     });
 
 
-
+    // Performing checks if the operator and operands are valid or not
     if (operator === ""){
         return "No operator Specified";
     }
@@ -189,6 +189,7 @@ function getDynamicResult(transcript) {
         return "Invalid Operands";
     }
 
+    // Evaluating Expression
     if (operator === "hcf"){
         return gcd(Number(operands[0]), Number(operands[1]));
     }
@@ -219,7 +220,7 @@ function gcd(x, y) {
       y = x % y;
       x = t;
     }
-    
+
     return x;  
 
 }
