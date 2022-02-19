@@ -5,7 +5,7 @@
 let screen= document.getElementById('screen');
 
 // Calculator Buttons 
-buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll('button');
 
 // Speech Button
 let speechbtn = document.getElementById('speechbtn');
@@ -26,26 +26,32 @@ for(item of buttons){
     item.addEventListener('click',(e)=>{
         buttonText= e.target.innerText;
         
-        if(buttonText=='x'){
-            buttonText='*';
-            screenValue+=buttonText;
-            screen.value=screenValue;
+
+        switch (buttonText) {
+            case 'x':
+                buttonText='*';
+                screenValue+=buttonText;
+                break;
+
+            case 'C':
+                screenValue="";
+                break;
+
+            case '=':
+                evalData = eval(screenValue);
+                screenValue = (evalData !== undefined) ? evalData : getDynamicResult(screenValue);
+                break;
+
+            case 'mic':
+                screenValue="Listening....";
+                break;
+        
+            default:
+                screenValue+=buttonText;
+                break;
         }
-        else if(buttonText=='C'){
-            screenValue=""
-            screen.value=screenValue;
-        }
-        else if(buttonText=='='){
-            screen.value=eval(screenValue);
-        }
-        else if(buttonText == 'mic'){
-            screenValue="Listening....";
-            screen.value=screenValue;
-        }
-        else{
-            screenValue+=buttonText;
-            screen.value=screenValue;
-        }
+
+        screen.value=screenValue;
     })
 }
 
@@ -75,6 +81,9 @@ speechbtn.addEventListener('click', function () {
         recognition.onresult = function(event) {
             var transcript = event.results[0][0].transcript;
             screen.value = transcript;
+            // getDynamicResult(transcript);
+            // const result = await response;
+            // console.log(response);
           };
         
         // start recognition
@@ -88,3 +97,31 @@ speechbtn.addEventListener('click', function () {
 
 });
   
+
+
+
+
+
+
+
+// Evaluates the expression hidden in a sentence
+async function getDynamicResult(transcript) {
+    const response = await fetch(`http://127.0.0.1:8000/calculate`, {
+     
+        // Adding method type
+        method: "POST",
+         
+        // Adding body or contents to send
+        body: transcript,
+         
+        // Adding headers to the request
+        headers: {
+            "Content-type": "text/plain"
+        }
+    });
+
+    const result = await response.text();
+    console.log(result);
+
+    // console.log(response);
+}

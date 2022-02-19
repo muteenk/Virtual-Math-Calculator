@@ -12,25 +12,27 @@ var tokenizer = new nlp.WordTokenizer();
 
 // MiddleWares
 app.use(cors({
-    origin: "http://127.0.0.1:5500/client/"
+    origin: "http://127.0.0.1:5500"
 })); 
 
 app.use(express.json());
+app.use(express.text());
 
 
 
 
 // GET request to compute the data
-app.get("/calculate", async(req, res) => {
+app.post("/calculate", async(req, res) => {
 
     try{
 
-        console.log(tokenizer.tokenize(req.query.calc));
-
-        res.status(200).send("Done");
+        console.log(eval("what is 2+4"));
+        console.log(req.body);
+        data = tokenizer.tokenize(req.body);
+        res.status(200).send(data);
     }
     catch(err){
-        res.status(400).send(err);
+        res.status(400).send("Something Went Wrong");
     }
 
 })
